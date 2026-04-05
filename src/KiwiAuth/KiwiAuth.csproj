@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <PackageId>KiwiAuth</PackageId>
+    <Title>KiwiAuth</Title>
+    <Description>Lightweight auth starter for ASP.NET Core — JWT access tokens, refresh token rotation, Google OAuth, and ASP.NET Identity without the ceremony.</Description>
+    <Authors>YourName</Authors>
+    <RepositoryUrl>https://github.com/yourusername/KiwiAuth</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>auth;jwt;aspnetcore;identity;oauth;refresh-token;authentication;authorization</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <!-- ASP.NET Core framework reference — no version pinning needed, resolved by runtime -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <!-- Packages not included in the shared framework -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.*" />
+  </ItemGroup>
+
+</Project>
