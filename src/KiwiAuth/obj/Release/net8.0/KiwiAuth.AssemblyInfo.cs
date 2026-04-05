@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("Lightweight auth starter for ASP.NET Core — JWT access tokens, refresh token rota" +
     "tion, Google OAuth, and ASP.NET Identity without the ceremony."))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c9da4c902d97e2725cb5cac20cdcb9ae980ae57")]
 [assembly: System.Reflection.AssemblyProductAttribute("KiwiAuth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KiwiAuth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
