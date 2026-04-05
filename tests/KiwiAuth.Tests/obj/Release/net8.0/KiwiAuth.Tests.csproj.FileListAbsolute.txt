@@ -477,3 +477,4 @@ C:\Users\dyako\KiwiAuth\tests\KiwiAuth.Tests\obj\Release\net8.0\KiwiAuth.Tests.g
 C:\Users\dyako\KiwiAuth\tests\KiwiAuth.Tests\obj\Release\net8.0\ref\KiwiAuth.Tests.dll
 C:\Users\dyako\KiwiAuth\tests\KiwiAuth.Tests\bin\Release\net8.0\Otp.NET.dll
 C:\Users\dyako\KiwiAuth\tests\KiwiAuth.Tests\bin\Release\net8.0\appsettings.Testing.json
+C:\Users\dyako\KiwiAuth\tests\KiwiAuth.Tests\obj\Release\net8.0\KiwiAuth.Tests.sourcelink.json

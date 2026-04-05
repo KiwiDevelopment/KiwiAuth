@@ -9,7 +9,7 @@ Thanks for your interest in contributing. KiwiAuth aims to stay small, focused, 
 3. Create a branch: `git checkout -b feature/my-improvement`
 4. Make your changes
 5. Run tests: `dotnet test`
-6. Push and open a pull request against `main`
+6. Push and open a pull request against `master`
 
 ## Guidelines
 
@@ -37,7 +37,7 @@ Thanks for your interest in contributing. KiwiAuth aims to stay small, focused, 
 - Multi-tenancy
 - Event buses or messaging
 - CQRS / MediatR / DDD patterns
-- Email sending (use the `IEmailSender` integration point when it lands)
+- Email sending (implement `IEmailSender` and register it via DI — the integration point is already in place)
 
 ## Reporting Issues
 

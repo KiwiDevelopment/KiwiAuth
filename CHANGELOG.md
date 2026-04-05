@@ -7,6 +7,22 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-04-05
+
+### Added
+- `IEmailSender` interface — bring-your-own email sender via DI
+- Email confirmation on registration (`GET /auth/confirm-email`)
+- Password reset flow (`POST /auth/forgot-password`, `POST /auth/reset-password`)
+- Account lockout after N failed login attempts (`LockoutOptions`)
+- Custom password policy via `PasswordPolicyOptions`
+- `EmailOptions` (`RequireConfirmedEmail`)
+- `Frontend.EmailConfirmationUrl` and `Frontend.PasswordResetUrl` options
+- 10 new integration tests covering email flows and lockout
+
+### Fixed
+- `MfaOptions` was not being propagated through `Configure<KiwiAuthOptions>` (used defaults only)
+- Duplicate refresh token cookie logic in `MfaEndpoints` unified into shared `AuthEndpoints.SetRefreshTokenCookie`
+
 ## [1.0.0] - 2024-04-03
 
 ### Added

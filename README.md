@@ -19,6 +19,10 @@ Built for solo developers, indie hackers, startups, and internal tools that need
 - `/auth/me` — current user info and roles
 - Google OAuth (backend-initiated, redirects to frontend)
 - Role support (`User`, `Admin`, or custom)
+- **Email confirmation** on registration (bring-your-own sender via `IEmailSender`)
+- **Password reset** (token generation + validation endpoint)
+- **Account lockout** after N failed login attempts
+- **Custom password policy** via options
 - ASP.NET Core Identity for password hashing (PBKDF2)
 - EF Core + any provider (SQLite in sample)
 - Consistent `{ success, data }` / `{ success, error }` response shape
@@ -126,6 +130,16 @@ dotnet ef database update
 | `Google.ClientSecret` | `""` | Google OAuth client secret |
 | `Frontend.GoogleSuccessRedirectUrl` | `"/"` | Redirect after Google login success |
 | `Frontend.GoogleErrorRedirectUrl` | `"/"` | Redirect after Google login failure |
+| `Frontend.EmailConfirmationUrl` | `"/auth/confirm-email"` | Link destination in confirmation email |
+| `Frontend.PasswordResetUrl` | `"/auth/reset-password"` | Link destination in password reset email |
+| `Password.RequiredLength` | `8` | Minimum password length |
+| `Password.RequireDigit` | `true` | Require at least one digit |
+| `Password.RequireUppercase` | `false` | Require at least one uppercase letter |
+| `Password.RequireNonAlphanumeric` | `false` | Require at least one special character |
+| `Lockout.Enabled` | `true` | Enable account lockout |
+| `Lockout.MaxFailedAttempts` | `5` | Failed attempts before lockout |
+| `Lockout.LockoutMinutes` | `15` | Lockout duration in minutes |
+| `Email.RequireConfirmedEmail` | `false` | Block login until email is confirmed |
 
 Google OAuth is disabled when `ClientId` or `ClientSecret` is empty.
 
@@ -144,6 +158,9 @@ Google OAuth is disabled when `ClientId` or `ClientSecret` is empty.
 | `GET` | `/auth/me` | Bearer JWT | Current user info |
 | `GET` | `/auth/google/login` | — | Initiate Google OAuth |
 | `GET` | `/auth/google/callback` | — | Google OAuth callback |
+| `GET` | `/auth/confirm-email` | — | Confirm email address (`?userId=...&token=...`) |
+| `POST` | `/auth/forgot-password` | — | Request password reset email |
+| `POST` | `/auth/reset-password` | — | Reset password using token from email |
 
 ### MFA
 
@@ -266,7 +283,7 @@ Seeded credentials (Development only):
 dotnet test
 ```
 
-17 integration tests, in-memory SQLite, no external services required.
+28 integration tests, in-memory SQLite, no external services required.
 
 ---
 
@@ -278,6 +295,8 @@ dotnet test
 - Refresh token cookie: `HttpOnly`, `Secure`, `SameSite=Strict`, scoped to `/auth`
 - MFA session token: separate short-lived JWT (`mfa_pending` claim), not a valid access token
 - Signing key validated at startup (minimum 32 characters)
+- Account lockout after N failed attempts (configurable)
+- `POST /auth/forgot-password` always returns 200 — never reveals whether an email is registered
 
 ### Production Checklist
 
@@ -288,14 +307,12 @@ dotnet test
 - [ ] Review `SameSite=Strict` — cross-origin SPAs may need `SameSite=None; Secure`
 - [ ] Use EF migrations in production (`dotnet ef migrations add Initial`)
 - [ ] Remove or gate the dev admin seed before deploying
+- [ ] Register a real `IEmailSender` implementation if using email confirmation or password reset
 
 ---
 
 ## Limitations
 
-- No email verification
-- No password reset flow
-- No account lockout after failed attempts
 - Access tokens cannot be revoked mid-lifetime (they expire naturally)
 - Google token passed as query param after OAuth (see note in Google OAuth section)
 - No multi-tenancy

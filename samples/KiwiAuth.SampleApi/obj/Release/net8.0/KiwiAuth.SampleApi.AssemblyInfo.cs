@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KiwiAuth.SampleApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1573e6e71c633f13af5cec4619d2b61a5eeba473")]
 [assembly: System.Reflection.AssemblyProductAttribute("KiwiAuth.SampleApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KiwiAuth.SampleApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

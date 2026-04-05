@@ -1519,7 +1519,7 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
-      "KiwiAuth/1.0.0": {
+      "KiwiAuth/1.1.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Google": "8.0.25",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.25",
@@ -1528,8 +1528,8 @@
         },
         "runtime": {
           "KiwiAuth.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         },
         "compile": {
@@ -1538,7 +1538,7 @@
       },
       "KiwiAuth.SampleApi/1.0.0": {
         "dependencies": {
-          "KiwiAuth": "1.0.0",
+          "KiwiAuth": "1.1.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.25",
           "Swashbuckle.AspNetCore": "6.7.3"
         },
@@ -3874,7 +3874,7 @@
       "path": "xunit.extensibility.execution/2.7.1",
       "hashPath": "xunit.extensibility.execution.2.7.1.nupkg.sha512"
     },
-    "KiwiAuth/1.0.0": {
+    "KiwiAuth/1.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

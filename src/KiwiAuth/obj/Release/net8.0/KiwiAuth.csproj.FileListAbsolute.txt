@@ -10,3 +10,4 @@ C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Release\net8.0\KiwiAuth.dll
 C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Release\net8.0\refint\KiwiAuth.dll
 C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Release\net8.0\KiwiAuth.pdb
 C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Release\net8.0\ref\KiwiAuth.dll
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Release\net8.0\KiwiAuth.sourcelink.json

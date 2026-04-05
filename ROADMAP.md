@@ -2,7 +2,7 @@
 
 KiwiAuth follows a deliberate release pace — ship what's useful, don't ship what isn't needed yet.
 
-## v1.0 — MVP (current)
+## v1.0 — MVP
 
 - [x] Email/password registration and login
 - [x] JWT access tokens (HMAC-SHA256)
@@ -14,12 +14,12 @@ KiwiAuth follows a deliberate release pace — ship what's useful, don't ship wh
 - [x] Sample API with SQLite + Swagger
 - [x] Integration test foundation
 
-## v1.1 — Email flows
+## v1.1 — Email flows (current)
 
-- [ ] Email confirmation on registration (bring-your-own sender via `IEmailSender`)
-- [ ] Password reset (token generation + validation endpoint)
-- [ ] Account lockout after N failed login attempts
-- [ ] Custom password policy via options
+- [x] Email confirmation on registration (bring-your-own sender via `IEmailSender`)
+- [x] Password reset (token generation + validation endpoint)
+- [x] Account lockout after N failed login attempts
+- [x] Custom password policy via options
 
 ## v1.2 — More providers + token improvements
 

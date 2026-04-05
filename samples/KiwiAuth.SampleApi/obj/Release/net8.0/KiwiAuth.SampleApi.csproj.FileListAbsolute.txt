@@ -151,3 +151,4 @@ C:\Users\dyako\KiwiAuth\samples\KiwiAuth.SampleApi\obj\Release\net8.0\KiwiAuth.S
 C:\Users\dyako\KiwiAuth\samples\KiwiAuth.SampleApi\obj\Release\net8.0\KiwiAuth.SampleApi.genruntimeconfig.cache
 C:\Users\dyako\KiwiAuth\samples\KiwiAuth.SampleApi\obj\Release\net8.0\ref\KiwiAuth.SampleApi.dll
 C:\Users\dyako\KiwiAuth\samples\KiwiAuth.SampleApi\bin\Release\net8.0\appsettings.Testing.json
+C:\Users\dyako\KiwiAuth\samples\KiwiAuth.SampleApi\obj\Release\net8.0\KiwiAuth.SampleApi.sourcelink.json
