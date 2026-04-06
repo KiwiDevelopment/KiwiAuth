@@ -8,8 +8,8 @@
     <PackageId>KiwiAuth</PackageId>
     <Title>KiwiAuth</Title>
     <Description>Lightweight auth starter for ASP.NET Core — JWT access tokens, refresh token rotation, Google OAuth, and ASP.NET Identity without the ceremony.</Description>
-    <Authors>YourName</Authors>
-    <RepositoryUrl>https://github.com/yourusername/KiwiAuth</RepositoryUrl>
+    <Authors>Dmytro Diakov</Authors>
+    <RepositoryUrl>https://github.com/KiwiAuth/KiwiAuth</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>auth;jwt;aspnetcore;identity;oauth;refresh-token;authentication;authorization</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
