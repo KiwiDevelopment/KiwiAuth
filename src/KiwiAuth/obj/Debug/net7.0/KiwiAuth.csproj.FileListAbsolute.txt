@@ -1,0 +1,13 @@
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\bin\Debug\net7.0\KiwiAuth.deps.json
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\bin\Debug\net7.0\KiwiAuth.dll
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\bin\Debug\net7.0\KiwiAuth.pdb
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.csproj.AssemblyReference.cache
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.AssemblyInfoInputs.cache
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.AssemblyInfo.cs
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.csproj.CoreCompileInputs.cache
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.sourcelink.json
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.dll
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\refint\KiwiAuth.dll
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\KiwiAuth.pdb
+C:\Users\dyako\KiwiAuth\src\KiwiAuth\obj\Debug\net7.0\ref\KiwiAuth.dll

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>KiwiAuth</id>
+    <version>1.1.1</version>
+    <title>KiwiAuth</title>
+    <authors>Dmytro Diakov</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <description>Lightweight auth starter for ASP.NET Core — JWT access tokens, refresh token rotation, Google OAuth, and ASP.NET Identity without the ceremony.</description>
+    <tags>auth jwt aspnetcore identity oauth refresh-token authentication authorization</tags>
+    <repository type="git" url="https://github.com/KiwiAuth/KiwiAuth" commit="0676f5d10932495339947aae058c38a7af1b83c7" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.AspNetCore.Authentication.Google" version="8.0.25" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="8.0.25" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Identity.EntityFrameworkCore" version="8.0.25" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="8.0.25" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\dyako\KiwiAuth\src\KiwiAuth\bin\Release\net8.0\KiwiAuth.dll" target="lib\net8.0\KiwiAuth.dll" />
+    <file src="C:\Users\dyako\KiwiAuth\README.nuget.md" target="\README.md" />
+  </files>
+</package>

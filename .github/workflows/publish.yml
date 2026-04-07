@@ -1,0 +1,52 @@
+name: Publish NuGet Package
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            7.x
+            8.x
+            9.x
+            10.x
+
+      - name: Restore
+        run: dotnet restore src/KiwiAuth/KiwiAuth.csproj
+
+      - name: Build all target frameworks
+        run: |
+          dotnet build src/KiwiAuth/KiwiAuth.csproj -c Release -f net7.0 --no-restore
+          dotnet build src/KiwiAuth/KiwiAuth.csproj -c Release -f net8.0 --no-restore
+          dotnet build src/KiwiAuth/KiwiAuth.csproj -c Release -f net9.0 --no-restore
+          dotnet build src/KiwiAuth/KiwiAuth.csproj -c Release -f net10.0 --no-restore
+
+      - name: Pack
+        run: dotnet pack src/KiwiAuth/KiwiAuth.csproj -c Release --no-build -o nupkg
+
+      - name: Push to GitHub Packages
+        run: |
+          dotnet nuget push nupkg/*.nupkg \
+            --source "https://nuget.pkg.github.com/KiwiAuth/index.json" \
+            --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --skip-duplicate
+
+      - name: Push to NuGet.org
+        run: |
+          dotnet nuget push nupkg/*.nupkg \
+            --source "https://api.nuget.org/v3/index.json" \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --skip-duplicate

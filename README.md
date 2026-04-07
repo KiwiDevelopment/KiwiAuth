@@ -31,6 +31,18 @@ Built for solo developers, indie hackers, startups, and internal tools that need
 
 ---
 
+## Compatibility
+
+| .NET version | Supported |
+|---|---|
+| .NET 7 | Yes |
+| .NET 8 (LTS) | Yes |
+| .NET 9 | Yes |
+| .NET 10 (LTS) | Yes |
+| .NET 11 | Planned after release (Nov 2026) |
+
+---
+
 ## Why KiwiAuth?
 
 Auth is one of those things you can't afford to get wrong — but you also can't afford to overpay for it or spend weeks building it from scratch.

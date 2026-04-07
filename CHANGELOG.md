@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-04-07
+
+### Changed
+- Multi-target support: library now ships for **net7.0**, **net8.0**, **net9.0**, and **net10.0**
+- All ASP.NET Core package references now resolve per target framework (no longer pinned to `8.0.*`)
+
 ## [1.1.0] - 2026-04-05
 
 ### Added
